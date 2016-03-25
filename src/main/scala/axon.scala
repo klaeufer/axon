@@ -16,9 +16,9 @@ package object axon {
       builder ++= name
       nested foreach {
         case Attribute(k, v) =>
-          builder ++= " \""
+          builder ++= " "
           builder ++= k
-          builder ++= "\"=\""
+          builder ++= "=\""
           builder ++= v.toString
           builder ++= "\""
         case _ =>
