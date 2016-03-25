@@ -1,6 +1,6 @@
 package object axon {
 
-  trait MarkupLike extends Product {
+  trait MarkupLike {
 
     def name: String
 
@@ -77,6 +77,4 @@ package object axon {
   implicit class MarkupLikeSeq(val self: Seq[MarkupLike]) extends AnyVal {
     def ~(that: MarkupLike): Seq[MarkupLike] = self :+ that
   }
-
-  implicit def markupLikeSeq(self: MarkupLike): Seq[MarkupLike] = Seq(self)
 }
